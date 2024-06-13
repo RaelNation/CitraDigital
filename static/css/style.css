@@ -1,0 +1,312 @@
+/* CSS styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/Cover.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+}
+
+.logo {
+    padding: 20px 10%;
+    display: block;
+}
+
+.logo h6{
+    margin-top: 5px;
+    color: aquamarine;
+}
+
+nav ul{
+    margin-right: 10%;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #a4f9ff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.56s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.header-content {
+    margin-top: 2%;
+    font-size: 20px;
+}
+
+.header-left {
+    flex-basis: 55%;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-img{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 10px;
+}
+
+.header-img img{
+    width: 170px;
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+
+.header-right {
+    flex-basis: 45%;
+}
+
+.upload-box {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 300px;
+    padding: 30px 35px 35px;
+    background: #000000;
+    border-radius: 25px;
+    border: 1px solid white;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.185);
+    text-align: center; /* Center the content horizontally */
+}
+
+.upload-box h2 {
+    font-size: 25px;
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.upload-box form p{
+    color: #ffffff;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.header-content h1{
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.header-content p{
+    font-size: 20px;
+}
+
+.header-content p span {
+    color: aqua;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the form elements horizontally */
+}
+
+
+.btn {
+    margin-top: 20px;
+    display: block;
+    width: 200px;
+    border: 1px solid #000000;
+    padding: 14px 0;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #000000;
+    background: #e4fdff;
+    transition: background 0.5s;
+    text-align: center; /* Center the text in the button */
+}
+
+.btn:hover {
+    background: #008163;
+    color: #ffffff;
+}
+
+.choose-img {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: block;
+    width: 200px;
+    border: 1px solid #000000;
+    padding: 14px 0;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #000000;
+    background: #ffffff;
+    transition: background 0.5s;
+    text-align: center; /* Center the text in the button */
+}
+
+
+/* Editor-Page */
+#image-editor {
+    width: 100%;
+    height: 100vh;
+}
+
+.editor-left{
+    flex-basis: 60%;
+    padding: 0 55px;
+}
+
+.uploaded-img{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid white;
+}
+.uploaded-img img{
+ 
+    width: 480px;
+    height: 360px;
+    object-fit: contain;;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.transformation-row{
+    margin-top: 17px;
+}
+
+.options{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+
+
+.editor-right{
+    flex-basis: 40%;
+    padding: 0 55px;
+}
+
+.right-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editor-panel{
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 15px 20px;
+    width: 280px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.edit-desc{
+    text-align: center;
+    text-transform: uppercase;
+    color:rgb(244, 255, 127);
+    font-size: large;
+    font-weight: 1000;
+    margin: 10px 0;
+}
+
+.editor-panel label{
+    margin: 8px 0 2px 0;
+}
+
+
+.editor-panel button{
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    width:fit-content;
+    margin-top: 15px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(75, 255, 192);
+    border: 1px solid rgb(75, 255, 192);
+    border-radius: 8px;
+}
+
+.editor-apply
+{
+    display: inline-block;
+    text-align: center;
+}
+
+
+.editor-panel a{
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    width:fit-content;
+    margin-top: 15x;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgb(191, 131, 255);
+    border-radius: 8px;
+}

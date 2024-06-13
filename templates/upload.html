@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="header">
+        <nav>
+            <div class="logo">
+                <h1>CITRA NATION</h1>
+                    <h6>Nation of Image Processing</h6>
+            </div>
+            <ul>
+                <li><a href="#header-content">Home</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="header-content">
+                <div class="row">
+                    <div class="header-left">
+                        <div class="header-img">
+                            <img src="static/img/byzantine0.jpeg" alt="">
+                            <img src="static/img/byzantine.jpeg" alt="">
+                            <img src="static/img/byzantine1.jpeg" alt="">
+                        </div>        
+                        <h1>Hello World!</h1>
+                        <p>
+                            Selamat datang di dunia <span>Citra</span>. 
+                            <br>
+                            Menyusuri Pemrosesan Gambar
+                        </p>
+                    </div>
+                    <div class="header-right">
+                        <div class="upload-box">
+                            <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+                                <input type="file" name="file" class="file-input" hidden>
+                                <button type="button" class="choose-img">Choose Image</button>
+                                <p>after choose your image, <br> click upload</p>
+                                <button type="submit" class="btn">Upload Image</button>
+                            </form>
+                        </div>
+                    </div>      
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.choose-img').addEventListener('click', function() {
+            document.querySelector('.file-input').click();
+        });
+    </script>
+</body>
+</html>
